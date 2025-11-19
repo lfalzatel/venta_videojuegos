@@ -235,18 +235,24 @@ function subscribeNewsletter() {
 
 // ===== HEADER STICKY CON EFECTO =====
 let lastScroll = 0;
-const header = document.querySelector('.main-header');
+let header = null;
 
-window.addEventListener('scroll', function() {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
-    } else {
-        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+window.addEventListener('load', function() {
+    header = document.querySelector('header');
+
+    if (header) {
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+
+            lastScroll = currentScroll;
+        });
     }
-    
-    lastScroll = currentScroll;
 });
 
 // ===== MOBILE MENU TOGGLE =====
@@ -369,7 +375,7 @@ function openCartPanel() {
                     <div class="cart-item-price">$${item.price}</div>
                     <div class="cart-item-quantity">
                         <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
-                        <input type="number" class="quantity-input" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+                        <input type="number" class="quantity-input" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, parseInt(this.value) || 1)">
                         <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
                         <button class="remove-item" onclick="removeFromCart(${index})">Eliminar</button>
                     </div>
@@ -526,7 +532,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inicializar contador del carrito
     updateCartCount();
+
+    // Configurar event listeners para documentación
+    setupDocumentationListeners();
 });
+
+// ===== CONFIGURACIÓN DE DOCUMENTACIÓN =====
+function setupDocumentationListeners() {
+    console.log('🚀 SETTING UP DOCUMENTATION LISTENERS');
+
+    // Usar event delegation para las tarjetas de documentación
+    document.addEventListener('click', function(e) {
+        const docCard = e.target.closest('.doc-card');
+        if (docCard) {
+            e.preventDefault();
+            const filename = docCard.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+            if (filename) {
+                console.log('📁 CLICKED DOC CARD:', filename);
+                openDocModal(filename);
+            } else {
+                console.error('❌ Could not extract filename from onclick');
+            }
+        }
+    });
+
+    // También verificar que las tarjetas existen
+    const docCards = document.querySelectorAll('.doc-card');
+    console.log('📚 FOUND', docCards.length, 'DOCUMENTATION CARDS');
+
+    docCards.forEach((card, index) => {
+        const title = card.querySelector('h3')?.textContent || 'Unknown';
+        console.log(`📄 Card ${index + 1}: ${title}`);
+    });
+}
 
 // Load the included CSV dataset
 function loadDefaultDataset() {
@@ -871,6 +909,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Smooth scroll: Active');
     console.log('Data management: Ready');
 
+    // Verificar que el modal de documentación existe
+    const docModal = document.getElementById('docModal');
+    if (docModal) {
+        console.log('✅ Documentation modal found');
+    } else {
+        console.error('❌ Documentation modal NOT found');
+    }
+
     // Load default dataset
     loadDefaultDataset();
 
@@ -880,14 +926,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ===== DOCUMENTATION MODAL FUNCTIONS =====
 function openDocModal(filename) {
-    console.log('Opening doc modal for:', filename);
+    console.log('🎯 Opening doc modal for:', filename);
 
     const modal = document.getElementById('docModal');
     const title = document.getElementById('docModalTitle');
     const content = document.getElementById('docContent');
 
+    console.log('Modal element:', modal);
+    console.log('Title element:', title);
+    console.log('Content element:', content);
+
     if (!modal) {
-        console.error('Doc modal not found!');
+        console.error('❌ Doc modal not found!');
+        return;
+    }
+
+    if (!title) {
+        console.error('❌ Doc modal title not found!');
+        return;
+    }
+
+    if (!content) {
+        console.error('❌ Doc modal content not found!');
         return;
     }
 
@@ -903,7 +963,7 @@ function openDocModal(filename) {
     };
 
     title.textContent = titles[filename] || filename;
-    console.log('Set title to:', title.textContent);
+    console.log('✅ Set title to:', title.textContent);
 
     // Load file content
     loadDocContent(filename);
@@ -911,7 +971,22 @@ function openDocModal(filename) {
     // Show modal
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
-    console.log('Modal should now be visible');
+    console.log('✅ Modal display set to block');
+
+    // Force reflow to ensure visibility
+    modal.offsetHeight;
+    console.log('✅ Modal visibility check - computed style:', window.getComputedStyle(modal).display);
+
+    // Additional checks
+    console.log('✅ Modal element after display:', modal);
+    console.log('✅ Modal bounding rect:', modal.getBoundingClientRect());
+    console.log('✅ Modal z-index:', window.getComputedStyle(modal).zIndex);
+
+    // Check if modal is actually visible
+    setTimeout(() => {
+        console.log('⏰ After timeout - Modal visibility:', window.getComputedStyle(modal).display);
+        console.log('⏰ After timeout - Modal opacity:', window.getComputedStyle(modal).opacity);
+    }, 100);
 }
 
 function closeDocModal() {
