@@ -1,0 +1,69 @@
+MIT License
+
+Copyright (c) 2024 LUGX Gaming
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Dependencias de Terceros
+
+Este proyecto utiliza las siguientes librerías de terceros:
+
+### Font Awesome
+- **Versión**: 6.4.0
+- **Licencia**: Font Awesome Free License
+- **URL**: https://fontawesome.com/license/free
+- **Uso**: Sistema de iconografía
+
+**Font Awesome Free License**:
+- Icons: CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+- Fonts: SIL OFL 1.1 License (https://scripts.sil.org/OFL)
+- Code: MIT License (https://opensource.org/licenses/MIT)
+
+---
+
+## Atribuciones
+
+### Inspiración de Diseño
+- **TemplateMo**: Inspiración para el layout inicial
+- URL: https://templatemo.com
+
+### Recursos de Imágenes
+Las imágenes utilizadas en este proyecto son de uso libre o bajo licencias apropiadas:
+- Unsplash (https://unsplash.com)
+- Pexels (https://pexels.com)
+
+---
+
+## Nota sobre Datos de Juegos
+
+El dataset de juegos (`games_dataset.csv`) contiene información recopilada de fuentes públicas con fines educativos y demostrativos. Los nombres de juegos, desarrolladores, publishers y marcas son propiedad de sus respectivos dueños.
+
+---
+
+## Contribuciones
+
+Al contribuir a este proyecto, aceptas que tus contribuciones sean licenciadas bajo la misma MIT License.
+
+Para más información, ver [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+**Contacto Legal**: legal@lugxgaming.com
