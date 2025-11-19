@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUGX Gaming - Best Gaming Site Ever</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        <!-- Header -->
+        <header>
+            <img src="./img/logo.png" alt="LUGX Logo">
+            <!-- Navegación Central -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Games</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#analytics">Analytics</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+            <!-- Iconos de Usuario -->
+            <div class="header-icons">
+                <button class="icon-button" title="Search" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="icon-button cart-icon" title="Shopping Cart" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="icon-button notifications-btn" title="Notifications" aria-label="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <!-- Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="icon-button profile-btn" title="Profile" aria-label="Profile">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item" onclick="openSideModal('loginModal')">
+                            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                        </a>
+                        <a href="#" class="dropdown-item" onclick="openSideModal('profileModal')">
+                            <i class="fas fa-user"></i> Mi Perfil
+                        </a>
+                        <a href="#" class="dropdown-item" onclick="openSideModal('wishlistModal')">
+                            <i class="fas fa-heart"></i> Lista de Deseos
+                        </a>
+                    </div>
+                </div>
+                
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+        </header>
+        <!-- Banner Principal -->
+    <section class="hero-banner" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">WELCOME TO LUGX</p>
+                <h1 class="hero-title">BEST GAMING SITE EVER!</h1>
+                <p class="hero-description">LUGX Gaming is free Bootstrap 5 html css website template for your gaming website. You can download and use this layout for commercial purposes. Please tell your friends about TemplateMo.</p>
+                <div class="hero-search">
+                    <input type="text" class="search-input" placeholder="Search for games...">
+                    <button class="search-btn">SEARCH NOW</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./img/banner-image.jpg" alt="Featured Game" class="featured-game-img">
+                <span class="game-price">$22</span>
+                <span class="game-discount">- 40%</span>
+            </div>
+        </div>
+        </section>    
+        <!-- Features Section -->
+         <section class="features-section">
+        <div class="features-container">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <img src="img/featured-01.png" alt="Free Storage">
+                </div>
+                <h3>FREE STORAGE</h3>
+                <p>Unlimited cloud storage for all your games</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <img src="img/featured-02.png" alt="User More">
+                </div>
+                <h3>USER FRIENDLY</h3>
+                <p>Easy to use interface for everyone</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <img src="img/featured-03.png" alt="Reply Ready">
+                </div>
+                <h3>REPLY READY</h3>
+                <p>24/7 customer support available</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <img src="img/featured-04.png" alt="Easy Layout">
+                </div>
+                <h3>EASY LAYOUT</h3>
+                <p>Intuitive design for best experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Games Section -->
+    <section class="games-section" id="trending">
+        <div class="section-header">
+            <div class="section-title">
+                <span class="section-subtitle">TRENDING</span>
+                <h2 class="section-main-title">Trending Games</h2>
+            </div>
+            <a href="#" class="view-all-btn">VIEW ALL</a>
+        </div>
+        <div class="games-grid">
+            <div class="game-card" onclick="openModal('modal1')">
+                <div class="game-image">
+                    <img src="./img/trending-01.jpg" alt="Assassin's Creed">
+                    <div class="game-overlay">
+                        <span class="quick-view">Quick View</span>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Action</span>
+                    <h3 class="game-title">Assassin's Creed</h3>
+                    <div class="game-price-tag">
+                        <span class="old-price">$28</span>
+                        <span class="new-price">$20</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="game-card" onclick="openModal('modal2')">
+                    <div class="game-image">
+                        <img src="./img/trending-02.jpg" alt="Epic Game">
+                        <div class="game-overlay">
+                            <span class="quick-view">Quick View</span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <span class="game-category">Adventure</span>
+                        <h3 class="game-title">Epic Adventure</h3>
+                        <div class="game-price-tag">
+                            <span class="new-price">$44</span>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="game-card" onclick="openModal('modal3')">
+                    <div class="game-image">
+                        <img src="./img/trending-03.jpg" alt="Combat Master">
+                        <div class="game-overlay">
+                            <span class="quick-view">Quick View</span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <span class="game-category">Shooter</span>
+                        <h3 class="game-title">Combat Master</h3>
+                        <div class="game-price-tag">
+                            <span class="old-price">$64</span>
+                            <span class="new-price">$44</span>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="game-card" onclick="openModal('modal4')">
+                    <div class="game-image">
+                        <img src="./img/trending-04.jpg" alt="Fantasy World">
+                        <div class="game-overlay">
+                            <span class="quick-view">Quick View</span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <span class="game-category">RPG</span>
+                        <h3 class="game-title">Fantasy World</h3>
+                        <div class="game-price-tag">
+                            <span class="new-price">$32</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    </section>
+     <!-- Top Games / Most Played Section -->
+    <section class="top-games-section" id="shop">
+        <div class="section-header">
+            <div class="section-title">
+                <span class="section-subtitle">TOP GAMES</span>
+                <h2 class="section-main-title">Most Played</h2>
+            </div>
+            <a href="#" class="view-all-btn">VIEW ALL</a>
+        </div>
+
+        <!-- Contenedor Horizontal para Most Played -->
+        <div class="most-played-container">
+            <div class="game-card-horizontal" onclick="openModal('modal5')">
+                <div class="game-image">
+                    <img src="img/1 warframe.jpg" alt="Warframe">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Action</span>
+                    <h3 class="game-title">Warframe</h3>
+                    <div class="game-price-tag">
+                        <span class="old-price">$28</span>
+                        <span class="new-price">$20</span>
+                    </div>
+                    <button class="explore-btn">Explore</button>
+                </div>
+            </div>
+
+            <div class="game-card-horizontal" onclick="openModal('modal6')">
+                <div class="game-image">
+                    <img src="./img/2 Battlegrounds.jpg" alt="PUBG">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Battle Royale</span>
+                    <h3 class="game-title">PUBG</h3>
+                    <div class="game-price-tag">
+                        <span class="new-price">$44</span>
+                    </div>
+                    <button class="explore-btn">Explore</button>
+                </div>
+            </div>
+
+            <div class="game-card-horizontal" onclick="openModal('modal7')">
+                <div class="game-image">
+                    <img src="./img/3 apex.jpg" alt="Apex Legends">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Battle Royale</span>
+                    <h3 class="game-title">Apex Legends</h3>
+                    <div class="game-price-tag">
+                        <span class="old-price">$64</span>
+                        <span class="new-price">$44</span>
+                    </div>
+                    <button class="explore-btn">Explore</button>
+                </div>
+            </div>
+
+            <div class="game-card-horizontal" onclick="openModal('modal8')">
+                <div class="game-image">
+                    <img src="./img/4 sims.jpg" alt="The Sims">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Simulation</span>
+                    <h3 class="game-title">The Sims 4</h3>
+                    <div class="game-price-tag">
+                        <span class="new-price">$32</span>
+                    </div>
+                    <button class="explore-btn">Explore</button>
+                </div>
+            </div>
+
+            <div class="game-card-horizontal" onclick="openModal('modal9')">
+                <div class="game-image">
+                    <img src="./img/5 lostar.jpg" alt="Lost Ark">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">MMORPG</span>
+                    <h3 class="game-title">Lost Ark</h3>
+                    <div class="game-price-tag">
+                        <span class="new-price">$32</span>
+                    </div>
+                    <button class="explore-btn">Explore</button>
+                </div>
+            </div>
+
+            <div class="game-card-horizontal" onclick="openModal('modal10')">
+                <div class="game-image">
+                    <img src="./img/6 destiny.jpg" alt="Destiny 2">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">FPS/MMO</span>
+                    <h3 class="game-title">Destiny 2</h3>
+                    <div class="game-price-tag">
+                        <span class="new-price">$32</span>
+                    </div>
+                    <button class="explore-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="section-header-center">
+            <span class="section-subtitle">CATEGORIES</span>
+            <h2 class="section-main-title">Top Categories</h2>
+        </div>
+
+        <div class="categories-grid">
+            <div class="category-card" onclick="openModal('modalCat1')">
+                <div class="category-overlay">
+                    <h3>Fighting</h3>
+                </div>
+                <img src="./img/7.brawlhalla.jpg" alt="Fighting Games">
+            </div>
+
+            <div class="category-card" onclick="openModal('modalCat2')">
+                <div class="category-overlay">
+                    <h3>Sci-Fi</h3>
+                </div>
+                <img src="./img/1 warframe.jpg" alt="Sci-Fi Games">
+            </div>
+
+            <div class="category-card" onclick="openModal('modalCat3')">
+                <div class="category-overlay">
+                    <h3>Strategy</h3>
+                </div>
+                <img src="./img/8. tower.jpg" alt="Strategy Games">
+            </div>
+
+            <div class="category-card" onclick="openModal('modalCat4')">
+                <div class="category-overlay">
+                    <h3>Adventure</h3>
+                </div>
+                <img src="./img/trending-03.jpg" alt="Adventure Games">
+            </div>
+
+            <div class="category-card" onclick="openModal('modalCat5')">
+                <div class="category-overlay">
+                    <h3>RPG</h3>
+                </div>
+                <img src="./img/1 warframe.jpg" alt="RPG Games">
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="analytics-section" id="analytics">
+        <div class="analytics-container">
+            <div class="analytics-header">
+                <span class="section-subtitle">ANALYTICS</span>
+                <h2 class="section-main-title">Gaming Insights & Statistics</h2>
+                <p>Explore comprehensive data about our gaming platform, user engagement, and market trends</p>
+            </div>
+
+            <!-- Data Management Section -->
+            <div class="data-management-section">
+                <div class="data-controls">
+                    <div class="combined-form-card">
+                        <div class="form-header">
+                            <h3 class="centered-title">🎯 Game Recommendations & Dataset</h3>
+                            <button id="toggleUploadBtn" class="toggle-btn">▶</button>
+                        </div>
+
+                        <!-- Recommendation Form -->
+                        <div class="recommendation-section">
+                            <h4>Find Your Perfect Game</h4>
+                            <form id="recommendationForm" class="recommendation-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="budget">💰 Budget (USD):</label>
+                                        <select id="budget">
+                                            <option value="">Any budget (recommended)</option>
+                                            <option value="25">Under $25</option>
+                                            <option value="50">Under $50</option>
+                                            <option value="75">Under $75</option>
+                                            <option value="100">Under $100</option>
+                                            <option value="150">Under $150</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="minRating">⭐ Min Rating:</label>
+                                        <select id="minRating">
+                                            <option value="0">Any rating (recommended)</option>
+                                            <option value="7">7.0+ stars</option>
+                                            <option value="8">8.0+ stars</option>
+                                            <option value="9">9.0+ stars</option>
+                                            <option value="9.5">9.5+ stars (top rated)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="preferredGenre" class="colored-label">🎮 Preferred Genre: </label>
+                                        <select id="preferredGenre">
+                                            <option value="">Any genre (recommended)</option>
+                                            <!-- Options will be populated dynamically -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="platform" class="colored-label">💻 Preferred Platform:</label>
+                                        <select id="platform">
+                                            <option value="">Any platform (recommended)</option>
+                                            <!-- Options will be populated dynamically -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="calculate-btn">🔍 Get Recommendations</button>
+                            </form>
+                        </div>
+
+                        <!-- Upload Options (Collapsible) -->
+                        <div id="uploadOptions" class="upload-options collapsed">
+                            <h4>📁 Dataset Management</h4>
+                            <p>Upload a custom CSV file or use the default gaming dataset</p>
+                            <input type="file" id="csvFileInput" accept=".csv" class="file-input">
+                            <button id="loadCsvBtn" class="load-btn">Load Custom CSV</button>
+                            <div id="fileStatus" class="file-status">Default dataset loaded</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations Results -->
+                <div id="recommendationsResult" class="recommendations-result"></div>
+
+                <!-- Data Table -->
+                <div class="data-table-section">
+                    <h3>📊 Gaming Dataset Table</h3>
+                    <div class="table-controls">
+                        <div class="table-info">
+                            <span id="tableInfo">No data loaded</span>
+                        </div>
+                        <div class="table-filters">
+                            <select id="genreFilter">
+                                <option value="">All Genres</option>
+                            </select>
+                            <select id="platformFilter">
+                                <option value="">All Platforms</option>
+                            </select>
+                            <input type="text" id="searchInput" placeholder="Search games...">
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table id="gamesTable" class="games-table">
+                            <thead>
+                                <tr>
+                                    <th>Game Title</th>
+                                    <th>Genre</th>
+                                    <th>Platform</th>
+                                    <th>Release Year</th>
+                                    <th>Sales (M)</th>
+                                    <th>Rating</th>
+                                    <th>Price</th>
+                                    <th>Developer</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr>
+                                    <td colspan="8" class="no-data">Load a CSV file to view data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <!-- Bar Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Top Game Sales</h3>
+                        <span class="chart-icon">📊</span>
+                    </div>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <div class="bar-label">Warframe</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 85%; background: linear-gradient(90deg, #008af8 0%, #0070d1 100%);" data-value="85%"></div>
+                            </div>
+                            <div class="bar-value">85%</div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Apex Legends</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 78%; background: linear-gradient(90deg, #ee626b 0%, #d45560 100%);" data-value="78%"></div>
+                            </div>
+                            <div class="bar-value">78%</div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">PUBG</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 72%; background: linear-gradient(90deg, #28a745 0%, #20c997 100%);" data-value="72%"></div>
+                            </div>
+                            <div class="bar-value">72%</div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">The Sims 4</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 65%; background: linear-gradient(90deg, #ffc107 0%, #fd7e14 100%);" data-value="65%"></div>
+                            </div>
+                            <div class="bar-value">65%</div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Lost Ark</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 58%; background: linear-gradient(90deg, #6f42c1 0%, #e83e8c 100%);" data-value="58%"></div>
+                            </div>
+                            <div class="bar-value">58%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Platform Distribution</h3>
+                        <span class="chart-icon">🥧</span>
+                    </div>
+                    <div class="pie-chart-container">
+                        <div class="pie-chart">
+                            <div class="pie-segment" style="--percentage: 45; --color: #008af8;"></div>
+                            <div class="pie-segment" style="--percentage: 30; --color: #ee626b;"></div>
+                            <div class="pie-segment" style="--percentage: 15; --color: #28a745;"></div>
+                            <div class="pie-segment" style="--percentage: 10; --color: #ffc107;"></div>
+                        </div>
+                        <div class="pie-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #008af8;"></span>
+                                <span class="legend-text">PC (45%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #ee626b;"></span>
+                                <span class="legend-text">PlayStation (30%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #28a745;"></span>
+                                <span class="legend-text">Xbox (15%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #ffc107;"></span>
+                                <span class="legend-text">Nintendo (10%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>User Growth Trend</h3>
+                        <span class="chart-icon">📈</span>
+                    </div>
+                    <div class="line-chart">
+                        <svg viewBox="0 0 400 200" class="line-chart-svg">
+                            <defs>
+                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#008af8;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0070d1;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <polyline
+                                fill="none"
+                                stroke="url(#lineGradient)"
+                                stroke-width="3"
+                                points="0,180 50,160 100,140 150,120 200,100 250,80 300,60 350,40 400,20"
+                                class="line-path"
+                            />
+                            <circle cx="0" cy="180" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="50" cy="160" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="100" cy="140" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="150" cy="120" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="200" cy="100" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="250" cy="80" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="300" cy="60" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="350" cy="40" r="4" fill="#008af8" class="data-point"></circle>
+                            <circle cx="400" cy="20" r="4" fill="#008af8" class="data-point"></circle>
+                        </svg>
+                        <div class="line-chart-labels">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                            <span>Aug</span>
+                            <span>Sep</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Area Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Revenue Trends</h3>
+                        <span class="chart-icon">📊</span>
+                    </div>
+                    <div class="area-chart">
+                        <svg viewBox="0 0 400 200" class="area-chart-svg">
+                            <defs>
+                                <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#008af8;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#008af8;stop-opacity:0.1" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M0,200 L0,180 L50,160 L100,140 L150,120 L200,100 L250,80 L300,60 L350,40 L400,20 L400,200 Z"
+                                fill="url(#areaGradient)"
+                                class="area-fill"
+                            />
+                            <polyline
+                                fill="none"
+                                stroke="#008af8"
+                                stroke-width="2"
+                                points="0,180 50,160 100,140 150,120 200,100 250,80 300,60 350,40 400,20"
+                                class="area-line"
+                            />
+                        </svg>
+                        <div class="area-chart-labels">
+                            <span>Q1</span>
+                            <span>Q2</span>
+                            <span>Q3</span>
+                            <span>Q4</span>
+                            <span>Q1</span>
+                            <span>Q2</span>
+                            <span>Q3</span>
+                            <span>Q4</span>
+                            <span>Q1</span>
+                            <span>Q2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <h4>1.2M</h4>
+                        <p>Active Users</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎮</div>
+                    <div class="stat-content">
+                        <h4>50K+</h4>
+                        <p>Games Available</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <h4>$2.5M</h4>
+                        <p>Monthly Revenue</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-content">
+                        <h4>4.8</h4>
+                        <p>Average Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-subtitle">ABOUT LUGX</span>
+                    <h2>Why Choose LUGX Gaming?</h2>
+                    <p>We are your one-stop destination for the best gaming experience. With thousands of games, competitive prices, and a passionate community, LUGX Gaming brings you everything you need to level up your gaming journey.</p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <h3>10K+</h3>
+                            <p>Games Available</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>50K+</h3>
+                            <p>Happy Gamers</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>24/7</h3>
+                            <p>Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Largest Game Collection</h4>
+                            <p>Thousands of games across all platforms</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Best Prices Guaranteed</h4>
+                            <p>Competitive pricing on all titles</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Instant Delivery</h4>
+                            <p>Get your games immediately after purchase</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>24/7 Customer Support</h4>
+                            <p>Always here to help with your gaming needs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-actions">
+                    <button class="primary-btn">Explore Games</button>
+                    <button class="secondary-btn">Join Community</button>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-container">
+                    <img src="./img/7d842a98256450929e5d71a1ca5b02b0584166e3a533903fa5a19092.webp" alt="About LUGX Gaming">
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Our Story</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <span class="section-subtitle">CONTACT US</span>
+                <h2>Get In Touch</h2>
+                <p>Have questions about our games or need support? We're here to help!</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h3>Send us a Message</h3>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input type="text" id="contactName" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing & Payments</option>
+                                <option value="games">Game Information</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" placeholder="Tell us how we can help..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Visit Us</h4>
+                            <p>123 Gaming Street<br>Game City, GC 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-GAME<br>Mon-Fri: 9AM-6PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Us</h4>
+                            <p>support@lugxgaming.com<br>sales@lugxgaming.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Support Hours</h4>
+                            <p>24/7 Live Chat<br>Mon-Fri: 9AM-6PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitch"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-header-center">
+            <span class="section-subtitle">TESTIMONIALS</span>
+            <h2 class="section-main-title">What Gamers Say</h2>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Best gaming platform I've ever used! The selection is incredible and prices are unbeatable."</p>
+                <div class="testimonial-author">
+                    <h4>John Doe</h4>
+                    <span>Pro Gamer</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Instant delivery and great customer service. Highly recommended for all gamers!"</p>
+                <div class="testimonial-author">
+                    <h4>Jane Smith</h4>
+                    <span>Content Creator</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Amazing deals and a huge library. LUGX Gaming is my go-to for all my gaming needs."</p>
+                <div class="testimonial-author">
+                    <h4>Mike Johnson</h4>
+                    <span>Casual Gamer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de promociones -->
+    <section class="promotions">
+        <div class="header">
+            <div class="header3"><h1>GAMERS SINCE 2001</h1></div>
+            <div class="header2"></div>
+            <div class="header3"><h1>FOR GAMERS, SINCE 2012</h1></div>
+        </div>
+        <div class="promotion-container">
+            <div class="background-image"></div>
+      
+            <div class="promotion-box left-box">
+                <h5 class="promotion-title">OUR SHOP</h5>
+                <h6 class="promotion-heading">
+                    Go Pre-Order <br> Buy & Get <br> Best <span>Prices</span> <br> For You!
+                </h6>
+                <p class="promotion-description">
+                    Pre-order your favorite games and get exclusive bonuses, early access, and the best launch prices. Don't miss out on limited-time offers and special editions!
+                </p><br>
+                <h3 class="textitu3">SHOP NOW</h3>
+            </div>
+      
+            <div class="promotion-box right-box">
+                <h5 class="promotion-title">NEWSLETTER</h5>
+                <h6 class="promotion-heading">
+                    Get Up To $100 Off <br> Just Buy <br> <span>Subscribe</span> <br> Newsletter!
+                </h6>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" id="newsletterEmail">
+                    <button class="newsletter-btn" onclick="subscribeNewsletter()">SUBSCRIBE NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About LUGX</h3>
+                <p>Your ultimate destination for gaming. We provide the best games at the best prices with exceptional customer service.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, NY</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                    <li><i class="fas fa-envelope"></i> info@lugxgaming.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 LUGX Gaming. All rights reserved. | Designed with <i class="fas fa-heart"></i> for Gamers</p>
+        </div>
+    </footer>
+
+    <!-- MODALES (mantienen la estructura original) -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <img src="./img/trending-01.jpg" alt="Assassin's Creed" class="modal-img">
+            <h2>Assassin's Creed</h2>
+            <p class="modal-category">Género: Action/Adventure</p>
+            <p class="modal-price">Precio: <del>$28</del> <strong>$20</strong></p>
+            <p class="modal-description">
+                Sumérgete en una aventura épica a través de la historia. Assassin's Creed te lleva a mundos increíbles
+                donde la historia y la fantasía se encuentran.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Modo Un jugador</li>
+                <li>✓ Mundo Abierto</li>
+                <li>✓ Gráficos 4K</li>
+                <li>✓ Historia inmersiva</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Assassin\'s Creed', 20)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <img src="./img/trending-02.jpg" alt="Epic Adventure" class="modal-img">
+            <h2>Epic Adventure</h2>
+            <p class="modal-category">Género: Adventure</p>
+            <p class="modal-price">Precio: <strong>$44</strong></p>
+            <p class="modal-description">
+                Explora mundos fantásticos llenos de acción y aventura.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Multijugador Online</li>
+                <li>✓ Sistema de crafteo</li>
+                <li>✓ Más de 100 horas de juego</li>
+                <li>✓ Actualizaciones constantes</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Epic Adventure', 44)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <img src="./img/trending-03.jpg" alt="Combat Master" class="modal-img">
+            <h2>Combat Master</h2>
+            <p class="modal-category">Género: Shooter</p>
+            <p class="modal-price">Precio: <del>$64</del> <strong>$44</strong></p>
+            <p class="modal-description">
+                Domina el campo de batalla con las mejores mecánicas de combate.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Campaña épica</li>
+                <li>✓ Modo competitivo</li>
+                <li>✓ Personalización avanzada</li>
+                <li>✓ E-sports ready</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Combat Master', 44)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <img src="./img/trending-04.jpg" alt="Fantasy World" class="modal-img">
+            <h2>Fantasy World</h2>
+            <p class="modal-category">Género: RPG</p>
+            <p class="modal-price">Precio: <strong>$32</strong></p>
+            <p class="modal-description">
+                Vive una experiencia RPG inolvidable en un mundo de fantasía.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Sistema de clases</li>
+                <li>✓ Mundo abierto masivo</li>
+                <li>✓ Misiones épicas</li>
+                <li>✓ Multijugador cooperativo</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Fantasy World', 32)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <img src="img/1 warframe.jpg" alt="Warframe" class="modal-img">
+            <h2>Warframe</h2>
+            <p class="modal-category">Género: Action/Sci-Fi</p>
+            <p class="modal-price">Precio: <del>$28</del> <strong>$20</strong></p>
+            <p class="modal-description">
+                Un shooter cooperativo de ciencia ficción.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Free to Play</li>
+                <li>✓ Cooperativo hasta 4 jugadores</li>
+                <li>✓ Más de 40 Warframes</li>
+                <li>✓ Combate acrobático</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Warframe', 20)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <img src="./img/2 Battlegrounds.jpg" alt="PUBG" class="modal-img">
+            <h2>PUBG Battlegrounds</h2>
+            <p class="modal-category">Género: Battle Royale</p>
+            <p class="modal-price">Precio: <strong>$44</strong></p>
+            <p class="modal-description">
+                El Battle Royale que lo empezó todo.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Mapas masivos</li>
+                <li>✓ Realismo extremo</li>
+                <li>✓ Vehículos variados</li>
+                <li>✓ Ranked mode</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('PUBG', 44)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <img src="./img/3 apex.jpg" alt="Apex Legends" class="modal-img">
+            <h2>Apex Legends</h2>
+            <p class="modal-category">Género: Battle Royale</p>
+            <p class="modal-price">Precio: <del>$64</del> <strong>$44</strong></p>
+            <p class="modal-description">
+                Battle Royale hero shooter con leyendas únicas.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Leyendas únicas</li>
+                <li>✓ Escuadrones de 3</li>
+                <li>✓ Sistema de ping avanzado</li>
+                <li>✓ Temporadas con contenido</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Apex Legends', 44)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <img src="./img/4 sims.jpg" alt="The Sims" class="modal-img">
+            <h2>The Sims 4</h2>
+            <p class="modal-category">Género: Simulation</p>
+            <p class="modal-price">Precio: <strong>$32</strong></p>
+            <p class="modal-description">
+                Crea y controla personas en un mundo virtual.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Creación ilimitada</li>
+                <li>✓ Constructor de casas</li>
+                <li>✓ Expansiones disponibles</li>
+                <li>✓ Comunidad activa</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('The Sims 4', 32)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <img src="./img/5 lostar.jpg" alt="Lost Ark" class="modal-img">
+            <h2>Lost Ark</h2>
+            <p class="modal-category">Género: MMORPG</p>
+            <p class="modal-price">Precio: <strong>$32</strong></p>
+            <p class="modal-description">
+                MMORPG de acción con vista isométrica.
+            </p>
+            <ul class="modal-features">
+                <li>✓ Mundo masivo</li>
+                <li>✓ Combate dinámico</li>
+                <li>✓ Múltiples clases</li>
+                <li>✓ PvE y PvP</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Lost Ark', 32)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">&times;</span>
+            <img src="./img/6 destiny.jpg" alt="Destiny 2" class="modal-img">
+            <h2>Destiny 2</h2>
+            <p class="modal-category">Género: FPS/MMO</p>
+            <p class="modal-price">Precio: <strong>$32</strong></p>
+            <p class="modal-description">
+                Shooter MMO de Bungie.
+            </p>
+            <ul class="modal-features">
+                <li>✓ PvE cooperativo</li>
+                <li>✓ Raids épicas</li>
+                <li>✓ PvP Crucible</li>
+                <li>✓ Loot legendario</li>
+            </ul>
+            <button class="modal-btn" onclick="addToCart('Destiny 2', 32)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Modales de Categorías -->
+    <div id="modalCat1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat1')">&times;</span>
+            <h2>Categoría: Fighting Games</h2>
+            <img src="./img/7.brawlhalla.jpg" alt="Fighting" class="modal-img">
+            <p class="modal-description">
+                Los mejores juegos de lucha donde la técnica y los reflejos son clave.
+            </p>
+            <ul class="modal-features">
+                <li>• Brawlhalla</li>
+                <li>• Street Fighter</li>
+                <li>• Mortal Kombat</li>
+                <li>• Tekken</li>
+            </ul>
+            <button class="modal-btn">Explorar Categoría</button>
+        </div>
+    </div>
+
+    <div id="modalCat2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat2')">&times;</span>
+            <h2>Categoría: Sci-Fi Games</h2>
+            <img src="./img/1 warframe.jpg" alt="Sci-Fi" class="modal-img">
+            <p class="modal-description">
+                Explora universos futuristas y tecnología avanzada.
+            </p>
+            <ul class="modal-features">
+                <li>• Warframe</li>
+                <li>• Halo</li>
+                <li>• Mass Effect</li>
+                <li>• Destiny</li>
+            </ul>
+            <button class="modal-btn">Explorar Categoría</button>
+        </div>
+    </div>
+
+    <div id="modalCat3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat3')">&times;</span>
+            <h2>Categoría: Strategy Games</h2>
+            <img src="./img/8. tower.jpg" alt="Strategy" class="modal-img">
+            <p class="modal-description">
+                Pon a prueba tu mente estratégica.
+            </p>
+            <ul class="modal-features">
+                <li>• Tower Defense</li>
+                <li>• Age of Empires</li>
+                <li>• Civilization</li>
+                <li>• StarCraft</li>
+            </ul>
+            <button class="modal-btn">Explorar Categoría</button>
+        </div>
+    </div>
+
+    <div id="modalCat4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat4')">&times;</span>
+            <h2>Categoría: Adventure Games</h2>
+            <img src="./img/trending-03.jpg" alt="Adventure" class="modal-img">
+            <p class="modal-description">
+                Embárcate en épicas aventuras llenas de exploración.
+            </p>
+            <ul class="modal-features">
+                <li>• The Legend of Zelda</li>
+                <li>• Uncharted</li>
+                <li>• Tomb Raider</li>
+                <li>• God of War</li>
+            </ul>
+            <button class="modal-btn">Explorar Categoría</button>
+        </div>
+    </div>
+
+    <div id="modalCat5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat5')">&times;</span>
+            <h2>Categoría: RPG Games</h2>
+            <img src="./img/1 warframe.jpg" alt="RPG" class="modal-img">
+            <p class="modal-description">
+                Sumérgete en mundos épicos de rol.
+            </p>
+            <ul class="modal-features">
+                <li>• The Witcher 3</li>
+                <li>• Final Fantasy</li>
+                <li>• Skyrim</li>
+                <li>• Dragon Age</li>
+            </ul>
+            <button class="modal-btn">Explorar Categoría</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="side-modal">
+        <div class="side-modal-content">
+            <div class="side-modal-header">
+                <h2>Iniciar Sesión</h2>
+                <span class="close-side-modal" onclick="closeSideModal('loginModal')">&times;</span>
+            </div>
+            <div class="side-modal-body">
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Recordarme
+                        </label>
+                        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button type="submit" class="login-submit-btn">Iniciar Sesión</button>
+                </form>
+                <div class="social-login">
+                    <p>O inicia sesión con:</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </button>
+                    </div>
+                </div>
+                <p class="register-link">¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="side-modal">
+        <div class="side-modal-content">
+            <div class="side-modal-header">
+                <h2>Mi Perfil</h2>
+                <span class="close-side-modal" onclick="closeSideModal('profileModal')">&times;</span>
+            </div>
+            <div class="side-modal-body">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-details">
+                        <h3>Luis Gamer</h3>
+                        <p>luis@email.com</p>
+                        <span class="member-since">Miembro desde: Enero 2024</span>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Juegos Comprados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">156</span>
+                        <span class="stat-label">Horas Jugadas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Logros</span>
+                    </div>
+                </div>
+                <div class="profile-menu">
+                    <a href="#" class="profile-menu-item">
+                        <i class="fas fa-shopping-bag"></i> Mis Compras
+                    </a>
+                    <a href="#" class="profile-menu-item">
+                        <i class="fas fa-heart"></i> Lista de Deseos
+                    </a>
+                    <a href="#" class="profile-menu-item">
+                        <i class="fas fa-cog"></i> Configuración
+                    </a>
+                    <a href="#" class="profile-menu-item">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlistModal" class="side-modal">
+        <div class="side-modal-content">
+            <div class="side-modal-header">
+                <h2>Mi Lista de Deseos</h2>
+                <span class="close-side-modal" onclick="closeSideModal('wishlistModal')">&times;</span>
+            </div>
+            <div class="side-modal-body">
+                <div class="wishlist-items">
+                    <div class="wishlist-item">
+                        <img src="./img/trending-01.jpg" alt="Assassin's Creed" class="wishlist-item-image">
+                        <div class="wishlist-item-details">
+                            <h4>Assassin's Creed</h4>
+                            <p class="wishlist-item-price">$20</p>
+                            <div class="wishlist-item-actions">
+                                <button class="add-to-cart-btn">Agregar al Carrito</button>
+                                <button class="remove-wishlist-btn">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wishlist-item">
+                        <img src="./img/trending-02.jpg" alt="Epic Adventure" class="wishlist-item-image">
+                        <div class="wishlist-item-details">
+                            <h4>Epic Adventure</h4>
+                            <p class="wishlist-item-price">$44</p>
+                            <div class="wishlist-item-actions">
+                                <button class="add-to-cart-btn">Agregar al Carrito</button>
+                                <button class="remove-wishlist-btn">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wishlist-item">
+                        <img src="./img/trending-03.jpg" alt="Combat Master" class="wishlist-item-image">
+                        <div class="wishlist-item-details">
+                            <h4>Combat Master</h4>
+                            <p class="wishlist-item-price">$44</p>
+                            <div class="wishlist-item-actions">
+                                <button class="add-to-cart-btn">Agregar al Carrito</button>
+                                <button class="remove-wishlist-btn">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="empty-wishlist" style="display: none;">
+                    <i class="fas fa-heart"></i>
+                    <p>Tu lista de deseos está vacía</p>
+                    <a href="#shop" class="shop-now-btn">Explorar Juegos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications Modal -->
+    <div id="notificationsModal" class="side-modal">
+        <div class="side-modal-content">
+            <div class="side-modal-header">
+                <h2>Notificaciones</h2>
+                <span class="close-side-modal" onclick="closeSideModal('notificationsModal')">&times;</span>
+            </div>
+            <div class="side-modal-body">
+                <div class="notifications-list">
+                    <div class="notification-item unread">
+                        <div class="notification-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>¡Oferta Especial!</h4>
+                            <p>50% de descuento en juegos de acción por tiempo limitado</p>
+                            <span class="notification-time">Hace 2 horas</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Compra Confirmada</h4>
+                            <p>Tu pedido de "Warframe" ha sido procesado exitosamente</p>
+                            <span class="notification-time">Hace 1 día</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Nuevo Logro Desbloqueado</h4>
+                            <p>¡Has alcanzado el nivel 10! Sigue jugando para más recompensas</p>
+                            <span class="notification-time">Hace 3 días</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Nuevo Juego Disponible</h4>
+                            <p>"Cyberpunk 2077" ya está disponible en nuestra tienda</p>
+                            <span class="notification-time">Hace 1 semana</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notifications-footer">
+                    <button class="mark-all-read-btn">Marcar Todo como Leído</button>
+                    <a href="#" class="view-all-link">Ver Todas las Notificaciones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Side Panel -->
+    <div id="cartPanel" class="cart-side-panel">
+        <div class="cart-panel-content">
+            <div class="cart-panel-header">
+                <h2>Carrito de Compras</h2>
+                <span class="close-cart-panel" onclick="closeCartPanel()">&times;</span>
+            </div>
+            <div class="cart-panel-body">
+                <div id="cartItems" class="cart-items">
+                    <!-- Cart items will be populated by JavaScript -->
+                </div>
+                <div id="emptyCart" class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Tu carrito está vacío</p>
+                    <a href="#shop" class="shop-now-btn">Ir a Comprar</a>
+                </div>
+            </div>
+            <div class="cart-panel-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

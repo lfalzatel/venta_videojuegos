@@ -1,0 +1,75 @@
+Game Title,Genre,Platform,Release Year,Global Sales (Millions),User Rating,Price (USD),Developer,Publisher,Multiplayer,ESRB Rating,Metacritic Score
+The Witcher 3: Wild Hunt,RPG,PC,2015,40.0,9.7,39.99,CD Projekt Red,CD Projekt,Single-player,M,95
+The Witcher 3: Wild Hunt,RPG,PlayStation,2015,30.0,9.7,39.99,CD Projekt Red,CD Projekt,Single-player,M,95
+The Witcher 3: Wild Hunt,RPG,Xbox,2015,8.0,9.7,39.99,CD Projekt Red,CD Projekt,Single-player,M,95
+The Witcher 3: Wild Hunt,RPG,Nintendo,2019,1.5,9.7,39.99,CD Projekt Red,CD Projekt,Single-player,M,95
+Red Dead Redemption 2,Action-Adventure,PC,2019,35.0,9.8,59.99,Rockstar Games,Rockstar Games,Single-player,M,96
+Red Dead Redemption 2,Action-Adventure,PlayStation,2018,38.0,9.8,59.99,Rockstar Games,Rockstar Games,Single-player,M,96
+Red Dead Redemption 2,Action-Adventure,Xbox,2018,20.0,9.8,59.99,Rockstar Games,Rockstar Games,Single-player,M,96
+God of War (2018),Action-Adventure,PlayStation,2018,23.0,9.6,49.99,Santa Monica,Sony Interactive,M,94
+God of War (2018),Action-Adventure,PC,2022,5.0,9.6,49.99,Santa Monica,Sony Interactive,M,94
+The Last of Us Part II,Action-Adventure,PlayStation,2020,17.0,9.5,39.99,Naughty Dog,Sony Interactive,M,95
+Cyberpunk 2077,RPG,PC,2020,25.0,7.2,59.99,CD Projekt Red,CD Projekt,Multiplayer,M,86
+Cyberpunk 2077,RPG,PlayStation,2020,8.0,7.2,59.99,CD Projekt Red,CD Projekt,Multiplayer,M,86
+Cyberpunk 2077,RPG,Xbox,2020,6.0,7.2,59.99,CD Projekt Red,CD Projekt,Multiplayer,M,86
+Elden Ring,Action RPG,PC,2022,20.0,9.5,59.99,FromSoftware,Bandai Namco,Multiplayer,M,96
+Elden Ring,Action RPG,PlayStation,2022,16.5,9.5,59.99,FromSoftware,Bandai Namco,Multiplayer,M,96
+Elden Ring,Action RPG,Xbox,2022,6.0,9.5,59.99,FromSoftware,Bandai Namco,Multiplayer,M,96
+Hades,Rogue-like,PC,2020,8.0,9.3,24.99,Supergiant Games,Supergiant Games,Single-player,T,93
+Hades,Rogue-like,Nintendo,2021,2.5,9.3,24.99,Supergiant Games,Supergiant Games,Single-player,T,93
+Hades,Rogue-like,PlayStation,2021,1.8,9.3,24.99,Supergiant Games,Supergiant Games,Single-player,T,93
+Hades,Rogue-like,Xbox,2021,0.8,9.3,24.99,Supergiant Games,Supergiant Games,Single-player,T,93
+Resident Evil Village,Horror,PC,2021,8.5,8.4,39.99,Capcom,Capcom,Single-player,M,84
+Resident Evil Village,Horror,PlayStation,2021,6.0,8.4,39.99,Capcom,Capcom,Single-player,M,84
+Resident Evil Village,Horror,Xbox,2021,3.5,8.4,39.99,Capcom,Capcom,Single-player,M,84
+Assassin's Creed Valhalla,Action-Adventure,PC,2020,12.0,8.1,59.99,Ubisoft,Ubisoft,Multiplayer,M,80
+Assassin's Creed Valhalla,Action-Adventure,PlayStation,2020,8.5,8.1,59.99,Ubisoft,Ubisoft,Multiplayer,M,80
+Assassin's Creed Valhalla,Action-Adventure,Xbox,2020,6.0,8.1,59.99,Ubisoft,Ubisoft,Multiplayer,M,80
+FIFA 23,Sports,PC,2022,2.5,7.8,69.99,EA Sports,EA Sports,Multiplayer,E,77
+FIFA 23,Sports,PlayStation,2022,8.0,7.8,69.99,EA Sports,EA Sports,Multiplayer,E,77
+FIFA 23,Sports,PlayStation,2023,1.2,7.8,69.99,EA Sports,EA Sports,Multiplayer,E,77
+FIFA 23,Sports,Xbox,2022,4.5,7.8,69.99,EA Sports,EA Sports,Multiplayer,E,77
+Call of Duty: Modern Warfare II,Shooter,PC,2022,15.0,8.2,69.99,Infinity Ward,Activision,Multiplayer,M,78
+Call of Duty: Modern Warfare II,Shooter,PlayStation,2022,12.0,8.2,69.99,Infinity Ward,Activision,Multiplayer,M,78
+Call of Duty: Modern Warfare II,Shooter,Xbox,2022,8.0,8.2,69.99,Infinity Ward,Activision,Multiplayer,M,78
+Minecraft,Sandbox,PC,2011,238.0,9.0,26.95,Mojang,Microsoft,Multiplayer,E,93
+Minecraft,Sandbox,PlayStation,2014,26.0,9.0,26.95,Mojang,Microsoft,Multiplayer,E,93
+Minecraft,Sandbox,Xbox,2014,32.0,9.0,26.95,Mojang,Microsoft,Multiplayer,E,93
+Minecraft,Sandbox,Nintendo,2018,17.0,9.0,26.95,Mojang,Microsoft,Multiplayer,E,93
+Among Us,Social Deduction,PC,2018,15.0,8.4,4.99,InnerSloth,InnerSloth,Multiplayer,E,85
+Among Us,Social Deduction,PlayStation,2021,1.2,8.4,4.99,InnerSloth,InnerSloth,Multiplayer,E,85
+Among Us,Social Deduction,Xbox,2021,0.8,8.4,4.99,InnerSloth,InnerSloth,Multiplayer,E,85
+Among Us,Social Deduction,Nintendo,2020,2.1,8.4,4.99,InnerSloth,InnerSloth,Multiplayer,E,85
+Fortnite,Battle Royale,PC,2017,85.0,8.1,0.00,Epic Games,Epic Games,Multiplayer,T,81
+Fortnite,Battle Royale,PlayStation,2017,45.0,8.1,0.00,Epic Games,Epic Games,Multiplayer,T,81
+Fortnite,Battle Royale,Xbox,2017,35.0,8.1,0.00,Epic Games,Epic Games,Multiplayer,T,81
+Fortnite,Battle Royale,Nintendo,2018,25.0,8.1,0.00,Epic Games,Epic Games,Multiplayer,T,81
+League of Legends,MOBA,PC,2009,150.0,8.7,0.00,Riot Games,Riot Games,Multiplayer,T,78
+Apex Legends,Battle Royale,PC,2019,50.0,8.6,0.00,Respawn,Respawn,Multiplayer,T,88
+Apex Legends,Battle Royale,PlayStation,2019,25.0,8.6,0.00,Respawn,Respawn,Multiplayer,T,88
+Apex Legends,Battle Royale,Xbox,2019,20.0,8.6,0.00,Respawn,Respawn,Multiplayer,T,88
+World of Warcraft,MMORPG,PC,2004,100.0,8.3,14.99,Blizzard,Blizzard,Multiplayer,M,93
+Diablo IV,Action RPG,PC,2023,8.0,8.1,69.99,Blizzard,Blizzard,Multiplayer,M,87
+Diablo IV,Action RPG,PlayStation,2023,3.5,8.1,69.99,Blizzard,Blizzard,Multiplayer,M,87
+Diablo IV,Action RPG,Xbox,2023,2.0,8.1,69.99,Blizzard,Blizzard,Multiplayer,M,87
+Baldur's Gate 3,RPG,PC,2023,10.0,9.8,59.99,Larian Studios,Larian Studios,Multiplayer,M,97
+Baldur's Gate 3,RPG,PlayStation,2023,2.5,9.8,59.99,Larian Studios,Larian Studios,Multiplayer,M,97
+Baldur's Gate 3,RPG,Xbox,2023,1.8,9.8,59.99,Larian Studios,Larian Studios,Multiplayer,M,97
+Starfield,RPG,PC,2023,8.0,7.8,69.99,Bethesda,Bethesda,Single-player,M,74
+Starfield,RPG,Xbox,2023,6.0,7.8,69.99,Bethesda,Bethesda,Single-player,M,74
+Hogwarts Legacy,Action-Adventure,PC,2023,12.0,8.3,59.99,Avalanche Software,WB Games,Single-player,T,83
+Hogwarts Legacy,Action-Adventure,PlayStation,2023,8.0,8.3,59.99,Avalanche Software,WB Games,Single-player,T,83
+Hogwarts Legacy,Action-Adventure,Xbox,2023,5.0,8.3,59.99,Avalanche Software,WB Games,Single-player,T,83
+Hogwarts Legacy,Action-Adventure,Nintendo,2023,2.0,8.3,59.99,Avalanche Software,WB Games,Single-player,T,83
+Alan Wake 2,Horror,PC,2023,1.5,8.7,49.99,Remedy,Remedy,Single-player,M,88
+Alan Wake 2,Horror,Xbox,2023,0.8,8.7,49.99,Remedy,Remedy,Single-player,M,88
+Marvel's Spider-Man 2,Action-Adventure,PlayStation,2023,10.0,9.2,69.99,Insomniac,Sony Interactive,Single-player,T,90
+Ghostwire: Tokyo,Action-Adventure,PC,2022,0.8,7.5,49.99,Tango Gameworks,Bethesda,Single-player,M,76
+Ghostwire: Tokyo,Action-Adventure,PlayStation,2022,0.5,7.5,49.99,Tango Gameworks,Bethesda,Single-player,M,76
+Ghostwire: Tokyo,Action-Adventure,Xbox,2022,0.3,7.5,49.99,Tango Gameworks,Bethesda,Single-player,M,76
+Street Fighter 6,Fighting,PC,2023,3.0,8.8,59.99,Capcom,Capcom,Multiplayer,T,92
+Street Fighter 6,Fighting,PlayStation,2023,2.0,8.8,59.99,Capcom,Capcom,Multiplayer,T,92
+Street Fighter 6,Fighting,Xbox,2023,1.5,8.8,59.99,Capcom,Capcom,Multiplayer,T,92
+Tekken 8,Fighting,PC,2024,1.2,8.6,69.99,Bandai Namco,Bandai Namco,Multiplayer,T,89
+Tekken 8,Fighting,PlayStation,2024,2.5,8.6,69.99,Bandai Namco,Bandai Namco,Multiplayer,T,89
+Tekken 8,Fighting,Xbox,2024,1.8,8.6,69.99,Bandai Namco,Bandai Namco,Multiplayer,T,89
