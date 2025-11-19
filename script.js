@@ -878,6 +878,182 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
 });
 
+// ===== DOCUMENTATION MODAL FUNCTIONS =====
+function openDocModal(filename) {
+    console.log('Opening doc modal for:', filename);
+
+    const modal = document.getElementById('docModal');
+    const title = document.getElementById('docModalTitle');
+    const content = document.getElementById('docContent');
+
+    if (!modal) {
+        console.error('Doc modal not found!');
+        return;
+    }
+
+    // Set title based on filename
+    const titles = {
+        'README.md': '📖 README',
+        'USER_GUIDE.md': '👤 User Guide',
+        'TECHNICAL_DOCS.md': '⚙️ Technical Documentation',
+        'API_REFERENCE.md': '🔌 API Reference',
+        'CHANGELOG.md': '📝 Changelog',
+        'CONTRIBUTING.md': '🤝 Contributing Guide',
+        'LICENSE': '⚖️ License'
+    };
+
+    title.textContent = titles[filename] || filename;
+    console.log('Set title to:', title.textContent);
+
+    // Load file content
+    loadDocContent(filename);
+
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    console.log('Modal should now be visible');
+}
+
+function closeDocModal() {
+    const modal = document.getElementById('docModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function loadDocContent(filename) {
+    console.log('Loading doc content for:', filename);
+
+    const content = document.getElementById('docContent');
+    content.innerHTML = '<div style="text-align: center; padding: 50px;"><div class="loading-spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #008af8; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div><p>Loading documentation...</p></div>';
+
+    const fileUrl = `files/${filename}`;
+    console.log('Fetching from URL:', fileUrl);
+
+    fetch(fileUrl)
+        .then(response => {
+            console.log('Fetch response:', response);
+            console.log('Response status:', response.status);
+            console.log('Response ok:', response.ok);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+            console.log('Received text length:', text.length);
+            console.log('First 200 chars:', text.substring(0, 200));
+
+            // Convert markdown-like formatting to HTML
+            const formattedText = formatDocContent(text);
+            console.log('Formatted text length:', formattedText.length);
+
+            content.innerHTML = formattedText;
+
+            // Scroll to top of content
+            content.scrollTop = 0;
+        })
+        .catch(error => {
+            console.error('Error loading document:', error);
+            content.innerHTML = `<div style="text-align: center; color: #ff6b6b; padding: 50px;">
+                <h3>❌ Error Loading Document</h3>
+                <p>Could not load ${filename}</p>
+                <p style="font-size: 12px; color: #ccc;">${error.message}</p>
+                <p style="font-size: 10px; color: #888;">Check console for details</p>
+            </div>`;
+        });
+}
+
+function formatDocContent(text) {
+    try {
+        // Basic markdown-like formatting
+        let formatted = text
+            // Headers (process in order from largest to smallest)
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
+            .replace(/^##### (.*$)/gim, '<h5>$1</h5>')
+            .replace(/^###### (.*$)/gim, '<h6>$1</h6>')
+
+            // Bold and italic
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+
+            // Code blocks (process before inline code)
+            .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+            .replace(/`([^`]+)`/g, '<code>$1</code>')
+
+            // Links
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+
+            // Blockquotes
+            .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+
+            // Horizontal rules
+            .replace(/^---$/gm, '<hr>')
+
+            // Tables (basic support)
+            .replace(/^\|(.+)\|$/gm, '<tr><td>$1</td></tr>')
+            .replace(/\|/g, '</td><td>')
+
+            // Lists (process unordered first, then ordered)
+            .replace(/^\* (.*$)/gim, '<li>$1</li>')
+            .replace(/^\d+\. (.*$)/gim, '<li>$1</li>');
+
+        // Group consecutive list items
+        formatted = formatted.replace(/(<li>.*<\/li>(\s*<li>.*<\/li>)*)/g, '<ul>$1</ul>');
+
+        // Handle paragraphs and line breaks
+        let lines = formatted.split('\n');
+        let result = [];
+        let currentParagraph = [];
+
+        for (let line of lines) {
+            line = line.trim();
+
+            if (line === '' && currentParagraph.length > 0) {
+                // End of paragraph
+                result.push('<p>' + currentParagraph.join('<br>') + '</p>');
+                currentParagraph = [];
+            } else if (line.startsWith('<h') || line.startsWith('<ul') ||
+                       line.startsWith('<ol') || line.startsWith('<pre') ||
+                       line.startsWith('<blockquote') || line.startsWith('<hr')) {
+                // Block elements - flush current paragraph first
+                if (currentParagraph.length > 0) {
+                    result.push('<p>' + currentParagraph.join('<br>') + '</p>');
+                    currentParagraph = [];
+                }
+                result.push(line);
+            } else if (line !== '') {
+                // Regular text - add to current paragraph
+                currentParagraph.push(line);
+            }
+        }
+
+        // Flush remaining paragraph
+        if (currentParagraph.length > 0) {
+            result.push('<p>' + currentParagraph.join('<br>') + '</p>');
+        }
+
+        return result.join('\n');
+    } catch (error) {
+        console.error('Error formatting document:', error);
+        // Return basic formatted version as fallback
+        return '<pre>' + text.replace(/</g, '<').replace(/>/g, '>') + '</pre>';
+    }
+}
+
+// Agregar estilos de animación para el spinner
+const docStyle = document.createElement('style');
+docStyle.textContent = `
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(docStyle);
+
 // Exponer funciones globalmente
 window.openModal = openModal;
 window.closeModal = closeModal;
@@ -891,3 +1067,5 @@ window.subscribeNewsletter = subscribeNewsletter;
 window.removeFromCart = removeFromCart;
 window.updateQuantity = updateQuantity;
 window.checkout = checkout;
+window.openDocModal = openDocModal;
+window.closeDocModal = closeDocModal;

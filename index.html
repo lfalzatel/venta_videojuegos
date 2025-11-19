@@ -19,6 +19,7 @@
                     <li><a href="#shop">Games</a></li>
                     <li><a href="#categories">Categories</a></li>
                     <li><a href="#analytics">Analytics</a></li>
+                    <li><a href="#documentation">Docs</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
 
@@ -927,6 +928,76 @@
             </div>
         </div>
     </section>
+
+    <!-- Documentation Section -->
+    <section class="documentation-section" id="documentation">
+        <div class="documentation-container">
+            <div class="documentation-header">
+                <span class="section-subtitle">DOCUMENTATION</span>
+                <h2 class="section-main-title">Project Documentation</h2>
+                <p>Explore comprehensive documentation for the LUGX Gaming platform</p>
+            </div>
+
+            <div class="documentation-grid">
+                <div class="doc-card" onclick="openDocModal('README.md')">
+                    <div class="doc-icon">📖</div>
+                    <h3>README</h3>
+                    <p>Project overview, installation, and getting started guide</p>
+                </div>
+
+                <div class="doc-card" onclick="openDocModal('USER_GUIDE.md')">
+                    <div class="doc-icon">👤</div>
+                    <h3>User Guide</h3>
+                    <p>Complete user manual and usage instructions</p>
+                </div>
+
+                <div class="doc-card" onclick="openDocModal('TECHNICAL_DOCS.md')">
+                    <div class="doc-icon">⚙️</div>
+                    <h3>Technical Docs</h3>
+                    <p>Technical specifications and architecture details</p>
+                </div>
+
+                <div class="doc-card" onclick="openDocModal('API_REFERENCE.md')">
+                    <div class="doc-icon">🔌</div>
+                    <h3>API Reference</h3>
+                    <p>Complete API documentation and endpoints</p>
+                </div>
+
+                <div class="doc-card" onclick="openDocModal('CHANGELOG.md')">
+                    <div class="doc-icon">📝</div>
+                    <h3>Changelog</h3>
+                    <p>Version history and release notes</p>
+                </div>
+
+                <div class="doc-card" onclick="openDocModal('CONTRIBUTING.md')">
+                    <div class="doc-icon">🤝</div>
+                    <h3>Contributing</h3>
+                    <p>Guidelines for contributors and development</p>
+                </div>
+
+                <div class="doc-card" onclick="openDocModal('LICENSE')">
+                    <div class="doc-icon">⚖️</div>
+                    <h3>License</h3>
+                    <p>Project licensing and legal information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Modal -->
+    <div id="docModal" class="doc-modal">
+        <div class="doc-modal-content">
+            <div class="doc-modal-header">
+                <h2 id="docModalTitle">Document Title</h2>
+                <span class="close-doc-modal" onclick="closeDocModal()">&times;</span>
+            </div>
+            <div class="doc-modal-body">
+                <div id="docContent" class="doc-content">
+                    <!-- Document content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="main-footer">
